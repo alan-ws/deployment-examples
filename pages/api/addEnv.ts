@@ -17,7 +17,7 @@ export default async function handler(
         key: "NEXT_PUBLIC_DYNAMIC_KEY",
         value: `${Math.floor(Math.random() * 100 + 1)}`,
         type: "encrypted",
-        target: "preview",
+        target: ["preview"],
       }),
       method: "POST",
       headers: {
