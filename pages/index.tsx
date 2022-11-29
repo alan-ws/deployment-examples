@@ -1,13 +1,12 @@
 export default function Home() {
-  const addEnvAndCreateDeployment = async () => {
-    await fetch("/api/addEnv");
-    await fetch("/api/deploy");
-  };
+  const addEnv = () => fetch("/api/addEnv");
+  const deploy = () => fetch("/api/deploy");
 
   return (
     <>
       <h1>{process.env.NEXT_PUBLIC_DYNAMIC_KEY ?? "NONE PROVIDED"}</h1>
-      <button onClick={addEnvAndCreateDeployment}>ADD ENV AND DEPLOY</button>
+      <button onClick={() => addEnv()}>ADD ENV</button>
+      <button onClick={() => deploy()}>DEPLOY</button>
     </>
   );
 }
