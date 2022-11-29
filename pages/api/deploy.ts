@@ -14,9 +14,15 @@ export default async function handler(
     const depURL = await fetch(deploymentURL, {
       body: JSON.stringify({
         name: process.env.NAME,
+        framework: 'nextjs',
+        gitSource: {
+          type: 'github',
+          repoId: process.env.REPO_ID
+        },
         gitMetaData: {
           remoteUrl: "git@github.com:alan-ws/deployment-examples.git",
         },
+        source: 'git',
         target: 'staging'
       }),
       method: "POST",
