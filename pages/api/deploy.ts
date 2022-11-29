@@ -17,6 +17,7 @@ export default async function handler(
         gitMetaData: {
           remoteUrl: "git@github.com:alan-ws/deployment-examples.git",
         },
+        target: 'staging'
       }),
       method: "POST",
       headers: {

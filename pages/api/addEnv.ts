@@ -15,7 +15,7 @@ export default async function handler(
     const urlRes = await fetch(envURL, {
       body: JSON.stringify({
         key: "NEXT_PUBLIC_DYNAMIC_KEY",
-        value: Math.floor(Math.random() * 100 + 1),
+        value: `${Math.floor(Math.random() * 100 + 1)}`,
         type: "encrypted",
         target: "preview",
       }),
