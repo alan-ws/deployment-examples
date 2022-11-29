@@ -11,6 +11,7 @@ export default async function handler(
   );
 
   try {
+    console.log('attempting to add dynamic created ENV VARS')
     const urlRes = await fetch(envURL, {
       body: JSON.stringify({
         key: "NEXT_PUBLIC_DYNAMIC_KEY",

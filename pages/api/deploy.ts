@@ -10,8 +10,14 @@ export default async function handler(
     "https://api.vercel.com"
   );
   try {
+    console.log("attempting to create a deployment");
     const depURL = await fetch(deploymentURL, {
-      body: JSON.stringify({ name: process.env.NAME }),
+      body: JSON.stringify({
+        name: process.env.NAME,
+        gitMetaData: {
+          remoteUrl: "git@github.com:alan-ws/deployment-examples.git",
+        },
+      }),
       method: "POST",
       headers: {
         Authorization: `Bearer ${process.env.TOKEN}`,
