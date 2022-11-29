@@ -6,7 +6,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const envURL = new URL(
-    `/v10/projects/${process.env.PROJECT_ID}/envteamId=${process.env.TEAM_ID}`,
+    `/v10/projects/${process.env.PROJECT_ID}/env?teamId=${process.env.TEAM_ID}`,
     "https://api.vercel.com"
   );
 
