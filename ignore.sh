@@ -1,4 +1,4 @@
-if [[ "$VERCEL_GIT_COMMIT_REF" != "main" ]]; then
+if [[ "$VERCEL_GIT_COMMIT_REF" eq "no_deploy" ]]; then
   echo 'exit';
   exit 0;
 fi
