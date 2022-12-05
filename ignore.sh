@@ -1,4 +1,4 @@
-if [[ "$VERCEL_GIT_COMMIT_REF" != "vercel_api" ]]; then
+if [[ "$VERCEL_GIT_COMMIT_REF" != "main" ]]; then
   echo 'exit';
   exit 0;
 fi
