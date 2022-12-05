@@ -1,7 +1,7 @@
 if [[ "$VERCEL_GIT_COMMIT_REF" == "no_deploy" ]]; then
-  echo 'exit';
-  exit 0;
+  echo 'GO';
+  exit 1;
 fi
 
-echo 'GO';
-exit 1;
+echo 'EXIT';
+exit 0;
