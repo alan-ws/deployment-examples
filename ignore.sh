@@ -4,4 +4,4 @@ if [[ "$VERCEL_GIT_COMMIT_REF" != "vercel_api" ]]; then
 fi
 
 echo 'GO';
-exit 0;
+exit 1;
