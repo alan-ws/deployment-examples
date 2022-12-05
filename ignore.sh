@@ -1,8 +1,7 @@
-BRANCH="$(git rev-parse --abbrev-ref HEAD)"
-if [[ "$BRANCH" != "main" ]]; then
-  echo 'let us go';
-  exit 1;
+if [[ "$VERCEL_GIT_COMMIT_REF" != "main" ]]; then
+  echo 'exit';
+  exit 0;
 fi
 
-echo 'exiting';
+echo 'GO';
 exit 0;
